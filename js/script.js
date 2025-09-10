@@ -9,7 +9,7 @@ fetch(BASE_URL)
 
         card.querySelector('h2').innerText = book.title;
 
-        let authors = book.authors[0].name;
+        let authors = book.authors[0]?.name;
         book.authors.shift();
         book.authors.forEach(author => {
             authors += ` / ${author.name}`;
