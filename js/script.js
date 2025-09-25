@@ -14,7 +14,7 @@ fetch(BASE_URL)
         book.authors.forEach(author => {
             authors += ` / ${author.name}`;
         });
-        card.querySelector('h3').innerText = authors;
+        card.querySelector('h3').innerText = authors ?? 'Anonymous';
 
         const cover = card.querySelector('img');
         cover.setAttribute('src', book.formats['image/jpeg']);
